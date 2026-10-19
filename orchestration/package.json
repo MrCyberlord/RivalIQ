@@ -1,0 +1,15 @@
+{
+  "name": "@rivaliq/orchestration",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "dev": "npm run build && node --env-file-if-exists=.env dist/server.js",
+    "check": "tsc --noEmit",
+    "build": "tsc",
+    "start": "node --env-file-if-exists=.env dist/server.js",
+    "test": "tsx --tsconfig tsconfig.test.json --test test/*.test.ts"
+  },
+  "dependencies": { "@mastra/core": "1.78.0", "zod": "^4.0.0" },
+  "devDependencies": { "@types/node": "^24.0.0", "tsx": "^4.20.0", "typescript": "~5.9.3" }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "rivaliq",
+  "private": true,
+  "workspaces": ["frontend", "orchestration"],
+  "scripts": {
+    "dev": "npm run dev --workspace frontend",
+    "build": "npm run build --workspace frontend",
+    "build:all": "npm run build --workspace frontend && npm run build --workspace orchestration",
+    "dev:orchestration": "npm run dev --workspace orchestration",
+    "test:orchestration": "npm test --workspace orchestration"
+  }
+}
